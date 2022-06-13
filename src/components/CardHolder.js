@@ -11,7 +11,6 @@ function CardHolder(props) {
     const shuffleCardOrder = () => {
       setCardOrder(shuffle(cardOrder));
       setFirstCard(cardOrder[0]);
-      console.log(cardOrder);
     };
 
     const button = document.getElementById("shuffleBtn");
