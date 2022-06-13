@@ -5,3 +5,13 @@
 
   
 }
+
+#card-holder {
+  display: flex;
+}
+
+.card {
+  border: 1px solid black;
+  width: 280px;
+  height: 350px;
+}
