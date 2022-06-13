@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 function Card(props) {
-  const [nameArray, setNameArray] = useState([
+  const nameArray = [
     "aragorn",
     "boromir",
     "elrond",
@@ -14,7 +14,7 @@ function Card(props) {
     "pippin",
     "sam",
     "saruman"
-  ]);
+  ];
 
   return (
     <div class="card">

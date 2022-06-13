@@ -3,6 +3,8 @@ import Card from "./Card";
 
 function CardHolder(props) {
   const [cardOrder, setCardOrder] = useState([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]);
+  // firstCard is used to force a render
+  // probably because cardOrder is an array? (doesnt actually change)
   const [firstCard, setFirstCard] = useState(cardOrder[0]);
 
   useEffect(() => {
@@ -23,7 +25,7 @@ function CardHolder(props) {
   function shuffle(array) {
     let currentIndex = array.length, randomIndex;
 
-    while (currentIndex != 0) {
+    while (currentIndex !== 0) {
       randomIndex = Math.floor(Math.random() * currentIndex);
       currentIndex--;
 
