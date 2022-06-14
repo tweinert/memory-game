@@ -14,18 +14,18 @@ import saruman from "../images/saruman.jpg";
 
 function Card(props) {
   const names = [
-    "aragorn",
-    "boromir",
-    "elrond",
-    "frodo",
-    "gandalf",
-    "gimli",
-    "gollum",
-    "legolas",
-    "merry",
-    "pippin",
-    "sam",
-    "saruman"
+    "Aragorn",
+    "Boromir",
+    "Elrond",
+    "Frodo",
+    "Gandalf",
+    "Gimli",
+    "Gollum",
+    "Legolas",
+    "Merry",
+    "Pippin",
+    "Sam",
+    "Saruman"
   ];
 
   const imageSources = [
@@ -44,7 +44,7 @@ function Card(props) {
   ];
 
   return (
-    <div className="card">
+    <div className="card" onClick={props.onClick}>
       <img src={imageSources[props.cardNum]} alt="name"></img>
       <br />
       <span>
