@@ -11,20 +11,6 @@ function CardHolder(props) {
   const [firstCard, setFirstCard] = useState(cardOrder[0]);
   const [selectedCharacters, setSelectedCharacters] = useState([]);
 
-  // useEffect(() => {
-  //   const shuffleCardOrder = () => {
-  //     setCardOrder(shuffle(cardOrder));
-  //     setFirstCard(cardOrder[0]);
-  //   };
-
-  //   const button = document.getElementById("shuffleBtn");
-  //   button.addEventListener("click", shuffleCardOrder);
-
-  //   return () => {
-  //     button.removeEventListener("click", shuffleCardOrder);
-  //   };
-  // }, [cardOrder]);
-
   function shuffle(array) {
     let currentIndex = array.length,
       randomIndex;
@@ -44,11 +30,20 @@ function CardHolder(props) {
 
   function handleCardClick(id) {
     if (selectedCharacters.includes(id)) {
-      {props.setScore(0)};
+      {
+        props.setScore(0);
+      }
       setSelectedCharacters([]);
     } else {
-      {props.setScore(props.score + 1)};
+      {
+        props.setScore(props.score + 1);
+      }
       setSelectedCharacters(selectedCharacters.concat(id));
+      if (props.bestScore <= props.score) {
+        {
+          props.setBestScore(props.score + 1);
+        }
+      }
       // check best score
     }
 
@@ -58,7 +53,6 @@ function CardHolder(props) {
 
   return (
     <div>
-      <button id="shuffleBtn">Shuffle</button>
       <div id="card-holder">
         <Card
           cardNum={cardOrder[0]}

@@ -25,7 +25,7 @@ function Card(props) {
     "Merry",
     "Pippin",
     "Sam",
-    "Saruman"
+    "Saruman",
   ];
 
   const imageSources = [
@@ -40,7 +40,7 @@ function Card(props) {
     merry,
     pippin,
     sam,
-    saruman
+    saruman,
   ];
 
   return (

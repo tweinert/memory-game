@@ -10,7 +10,12 @@ function App(props) {
   return (
     <div className="App">
       <Header score={score} bestScore={bestScore} />
-      <CardHolder score={score} setScore={setScore} setBestScore={setBestScore} />
+      <CardHolder
+        score={score}
+        setScore={setScore}
+        bestScore={bestScore}
+        setBestScore={setBestScore}
+      />
     </div>
   );
 }

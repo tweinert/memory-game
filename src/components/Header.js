@@ -5,7 +5,10 @@ function Header(props) {
     <div className="Header">
       <div className="title">
         <h2>Memory Game</h2>
-        <p>Get points by clicking on an image, but don't click on any more than once!</p>
+        <p>
+          Get points by clicking on an image, but don't click on any more than
+          once!
+        </p>
       </div>
       <div className="scoreboard">
         <p id="score">Score: {props.score}</p>
