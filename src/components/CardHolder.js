@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Card from "./Card";
 
 function CardHolder(props) {
@@ -10,6 +10,10 @@ function CardHolder(props) {
   // probably because cardOrder is an array? (doesnt actually change)
   const [firstCard, setFirstCard] = useState(cardOrder[0]);
   const [selectedCharacters, setSelectedCharacters] = useState([]);
+
+  useEffect(() => {
+    setFirstCard(cardOrder[0]);
+  }, [cardOrder]);
 
   function shuffle(array) {
     let currentIndex = array.length,
@@ -44,11 +48,9 @@ function CardHolder(props) {
           props.setBestScore(props.score + 1);
         }
       }
-      // check best score
     }
 
     setCardOrder(shuffle(cardOrder));
-    setFirstCard(cardOrder[0]);
   }
 
   return (

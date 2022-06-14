@@ -1,9 +1,20 @@
+:root {
+  --blue1: #4B6084;
+  --blue2: #415AAF;
+  --yellow: #E5B859;
+  --black: #0E1112;
+  --grey: #171D22;
+
+  background-color: var(--grey);
+}
+
 .Header {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
 
-  
+  color: var(--yellow);
+  background-color: var(--blue1);
 }
 
 #card-holder {
@@ -24,6 +35,10 @@
   border-radius: 4%;
   width: 280px;
   height: 350px;
+  font-size: 24px;
+
+  color: var(--blue2);
+  background-color: var(--black);
 }
 
 .card > img {
